@@ -1,0 +1,38 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    aspect-ratio: 1 / 1;
+    width: 50%;
+}
+
+
+.board{
+    display: grid;
+    height: 100%;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+}
+
+.board button{
+    height: 100%;
+    width: 100%;
+}
+
+.x{
+    background-color: red;
+}
+
+.o{
+    background-color: blue;
+}
