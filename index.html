@@ -7,21 +7,30 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body style="background-color: black;">
-    <div class="container">
-        <div class="board">
-            <button id="but1">1</button>
-            <button id="but2">2</button>
-            <button id="but3">3</button>
-            <button id="but4">4</button>
-            <button id="but5">5</button>
-            <button id="but6">6</button>
-            <button id="but7">7</button>
-            <button id="but8">8</button>
-            <button id="but9">9</button>
-        </div>
-    <button id="clear">erm</button>
+<body style="background-color: rgb(97, 134, 97);">
+    <dialog id="names">
+        <form method="dialog">
+            <label >Player 1 Name
+                <input type="text" name="player1name" placeholder="Player 1">
+            </label>
+            <label>Player 2 Name
+                <input type="text" name="player2name" placeholder="Player 2">
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    </dialog>
+    <dialog id="winner">
+        <h1 id="winnertext"></h1>
+        <button id="reset">Reset</button>
+    </dialog>
+    <div class="playerNames">
+        <h1 id="player1">Player 1</h1>
+        <h1 id="player2">Player 2</h1>
     </div>
-    <script>playGame();</script>
+    <div class="container">
+        <div class="board"></div>
+    </div>
+    <button id="clear">Reset</button>
+    <script>gameMaster();</script>
 </body>
 </html>

@@ -10,11 +10,14 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 50px;
+    --player_1_color : red;
+    --player_2_color : rgb(72, 0, 255);
 }
 
 .container{
     aspect-ratio: 1 / 1;
-    width: 50%;
+    width: clamp(300px, 50%, 1000px);
 }
 
 
@@ -22,17 +25,76 @@ body{
     display: grid;
     height: 100%;
     grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    button {
+        height: 100%;
+        width: 100%; 
+    }
 }
 
-.board button{
-    height: 100%;
-    width: 100%;
+#clear{
+    width: clamp(200px, 25%, 550px);
+    height: 100px;
 }
+
+#names{
+    justify-self: center;
+    
+    padding: 20px;
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        button{
+            width: 50%;
+        }
+    }
+}
+
+#winner{
+    visibility: hidden;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    width: clamp(150px, 25%, 800px);
+    aspect-ratio: 2 / 1;
+    h1{
+        font-size: clamp(15px, 3vw, 56px);
+    }
+    button{
+        width: fit-content;
+        font-size: clamp(9px, 2vw, 30px);
+    }
+    
+}
+
+.playerNames{
+    width: clamp(300px, 50%, 1000px);
+    display: flex;
+    justify-content: space-between;
+}
+
+#player1{
+    color: var(--player_1_color);
+}
+
+#player2{
+    color: var(--player_2_color);
+}
+
+#clear{
+    font-size: clamp(9px, 2vw, 30px);
+}
+
 
 .x{
-    background-color: red;
+    background-color: var(--player_1_color);
 }
 
 .o{
-    background-color: blue;
+    background-color: var(--player_2_color);
 }
